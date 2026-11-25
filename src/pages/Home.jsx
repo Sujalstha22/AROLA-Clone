@@ -1,13 +1,10 @@
 import React, { useRef } from "react";
 import Footer from "../components/layout/Footer";
-import Navbar from "../components/layout/Navbar";
 import Hero from "../sections/Hero/Hero";
 import Bottle from "../components/Bottle/Bottle";
 import useBottleAnimation from "../hooks/useBottleAnimation";
-import useNavbarAnimation from "../hooks/useNavbarAnimation";
 import WhyUs from "../sections/Whyus/WhyUs";
 import Himalaya from "../sections/Himalaya/Himalaya";
-import ArolaPreloader from "../components/preloader/Arolapreloader";
 import Waterfall from "../sections/waterfall/Waterfall";
 import Bushes from "../sections/Bushes/Bushes";
 import BottleShowcase from "../sections/BottleShowcase/BottleShowcase";
@@ -15,7 +12,7 @@ import Jungle from "../sections/Jungle/Jungle";
 import PeakFlowShowcase from "../sections/PeakFlowShowcase/PeakFlowShowcase";
 
 const Home = () => {
-  const navbarRef = useRef(null);
+  // const navbarRef = useRef(null);
   const heroRef = useRef(null);
   const whyUsRef = useRef(null);
   const himalayaRef = useRef(null);
@@ -34,10 +31,10 @@ const Home = () => {
     whyUsRef,
     himalayaRef,
   });
-  useNavbarAnimation(navbarRef);
+  // useNavbarAnimation(navbarRef);
   return (
     <div className="relative">
-      <Navbar navbarRef={navbarRef} />
+      {/* <Navbar navbarRef={navbarRef} /> */}
       <Bottle refs={bottleRefs} />
       <Hero heroRef={heroRef} />
       <WhyUs whyUsRef={whyUsRef} />

@@ -9,7 +9,7 @@ import backgroundBush from "../../assets/banner-bush.png";
 const BottleShowcase = () => {
   return (
     <section
-      className="relative h-screen overflow-hidden bg-black "
+      className="relative h-screen bg-black "
       style={{
         backgroundImage: `url(${backgroundBush})`,
       }}
@@ -24,7 +24,6 @@ const BottleShowcase = () => {
           -translate-y-1/2 object-cover"
       />
 
-      {/* Waterfall */}
       <img
         src={waterfall}
         alt=""

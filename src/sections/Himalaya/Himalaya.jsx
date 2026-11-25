@@ -20,7 +20,7 @@ const Himalaya = ({ himalayaRef }) => {
   return (
     <section
       ref={himalayaRef}
-      className="relative h-[120svh]  bg-white overflow-hidden"
+      className="relative h-[120vh]  bg-white overflow-hidden"
     >
       <div className=" relative h-[100svh] overflow-visible">
         {/* Blue circle */}
@@ -43,7 +43,7 @@ const Himalaya = ({ himalayaRef }) => {
           ref={mountainFrontRef}
           src={mountainFront}
           className="
-            absolute left-0 -bottom-8 sm:-bottom-10 md:-bottom-12 lg:-bottom-16 w-full h-auto z-40 pointer-events-none select-none "
+            absolute left-0 w-screen -bottom-8 sm:-bottom-10 md:-bottom-12 lg:-bottom-16 h-auto z-40 pointer-events-none select-none "
         />
 
         <div

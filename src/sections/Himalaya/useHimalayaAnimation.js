@@ -19,14 +19,16 @@ const useHimalayaAnimation = ({
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 20%",
+          start: "top top",
           end: "bottom 60%",
           scrub: 2,
+
+          markers: true,
         },
       });
       tl.fromTo(
         mountainBackRef.current,
-        { yPercent: 60 },
+        { yPercent: 30 },
         {
           yPercent: 0,
           scale: 1.05,
@@ -37,7 +39,7 @@ const useHimalayaAnimation = ({
       tl.fromTo(
         mountainFrontRef.current,
         {
-          yPercent: 70,
+          yPercent: 50,
         },
         {
           yPercent: 20,

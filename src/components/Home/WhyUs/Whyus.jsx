@@ -3,8 +3,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Bottle from "../../ui/Bottle";
-
 gsap.registerPlugin(ScrollTrigger);
 
 const WhyUs = () => {
@@ -15,7 +13,6 @@ const WhyUs = () => {
   const videoRef = useRef();
 
   const bottleGroupRef = useRef();
-  const bottleRef = useRef();
   const capClosedRef = useRef();
   const capGlowRef = useRef();
 

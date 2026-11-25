@@ -86,7 +86,7 @@ const Bushes = ({ bushRef }) => {
           ref={curtainRef}
           src={bushCurtain}
           alt=""
-          className=" absolute inset-0 w-screen h-[140vh] object-fill object-center z-50 pointer-events-none select-none "
+          className="absolute inset-0 w-screen h-[140vh] object-fill object-center z-50 pointer-events-none select-none "
         />
       </div>
     </section>

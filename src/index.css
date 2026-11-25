@@ -2,9 +2,13 @@
 
 @import "tailwindcss";
 
-:root {
-  --font-sans: "Poppins", sans-serif;
-  --font-mono: "Fira Code", monospace;
+@font-face {
+  font-family: font-bold;
+  src: url("/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: font2;
+  src: url("/Poppins-Regular.ttf");
 }
 
 * {

@@ -1,10 +1,10 @@
-import { useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
-import CircleFrame from "../../ui/CircleFrame";
-import Bottle from "../../ui/Bottle";
+import CircleFrame from '../../ui/CircleFrame';
+import Bottle from '../../ui/Bottle';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -32,8 +32,8 @@ const Hero = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top",
-          end: "+=4500",
+          start: 'top top',
+          end: '+=4500',
           pin: true,
           scrub: 1.5,
           markers: true,
@@ -41,7 +41,7 @@ const Hero = () => {
       });
       gsap.set(bottleGroupRef.current, {
         scale: 0.7,
-        transformOrigin: "center bottom",
+        transformOrigin: 'center bottom',
       });
       gsap.set(videoRef.current, {
         x: -220,
@@ -51,7 +51,7 @@ const Hero = () => {
 
       gsap.set(paragraphRef.current, {
         opacity: 0.2,
-        color: "#5B6B9C",
+        color: '#5B6B9C',
         y: 30,
       });
 
@@ -59,7 +59,7 @@ const Hero = () => {
         opacity: 0,
       });
 
-      tl.add("intro")
+      tl.add('intro')
 
         .to(
           scrollTextRef.current,
@@ -67,9 +67,9 @@ const Hero = () => {
             opacity: 0,
             y: 80,
             duration: 1.5,
-            ease: "none",
+            ease: 'none',
           },
-          "intro",
+          'intro',
         )
 
         .fromTo(
@@ -84,9 +84,9 @@ const Hero = () => {
             y: 0,
             scale: 1.4,
             duration: 1.5,
-            ease: "none",
+            ease: 'none',
           },
-          "intro",
+          'intro',
         )
 
         .to(
@@ -94,21 +94,21 @@ const Hero = () => {
           {
             scale: 1.5,
             duration: 1.5,
-            ease: "none",
+            ease: 'none',
           },
-          "intro",
+          'intro',
         )
 
         .to(
           circleStrokeRef.current,
           {
             attr: {
-              "stroke-width": 10,
+              'stroke-width': 10,
             },
             duration: 1.5,
-            ease: "none",
+            ease: 'none',
           },
-          "intro",
+          'intro',
         )
 
         .to(
@@ -116,9 +116,9 @@ const Hero = () => {
           {
             y: 100,
             duration: 1.5,
-            ease: "none",
+            ease: 'none',
           },
-          "intro",
+          'intro',
         )
 
         .set(
@@ -126,7 +126,7 @@ const Hero = () => {
           {
             opacity: 0,
           },
-          "intro+=0.55",
+          'intro+=0.55',
         )
 
         .set(
@@ -134,7 +134,7 @@ const Hero = () => {
           {
             opacity: 1,
           },
-          "intro+=0.55",
+          'intro+=0.55',
         )
 
         .to(
@@ -142,9 +142,9 @@ const Hero = () => {
           {
             y: -180,
             duration: 0.45,
-            ease: "power2.out",
+            ease: 'power2.out',
           },
-          "intro+=0.55",
+          'intro+=0.55',
         )
 
         .to(
@@ -154,7 +154,7 @@ const Hero = () => {
           },
         )
 
-        .add("closeBottle")
+        .add('closeBottle')
 
         .to(
           bottleGroupRef.current,
@@ -162,9 +162,9 @@ const Hero = () => {
             y: 65,
             scale: 0.7,
             duration: 0.7,
-            ease: "power2.in",
+            ease: 'power2.in',
           },
-          "closeBottle",
+          'closeBottle',
         )
 
         .to(
@@ -172,9 +172,9 @@ const Hero = () => {
           {
             y: 0,
             duration: 0.7,
-            ease: "power2.in",
+            ease: 'power2.in',
           },
-          "closeBottle",
+          'closeBottle',
         )
 
         .set(
@@ -182,7 +182,7 @@ const Hero = () => {
           {
             opacity: 0,
           },
-          "closeBottle+=0.6",
+          'closeBottle+=0.6',
         )
 
         .set(
@@ -190,23 +190,23 @@ const Hero = () => {
           {
             opacity: 1,
           },
-          "closeBottle+=0.6",
+          'closeBottle+=0.6',
         );
 
       // ==========================================================
       // HERO -> WHY US
       // ==========================================================
 
-      tl.add("transition")
+      tl.add('transition')
 
         .to(
           heroRef.current,
           {
             opacity: 0,
             duration: 0.8,
-            ease: "none",
+            ease: 'none',
           },
-          "transition",
+          'transition',
         )
 
         .to(
@@ -214,9 +214,9 @@ const Hero = () => {
           {
             opacity: 1,
             duration: 0.8,
-            ease: "none",
+            ease: 'none',
           },
-          "transition+=0.2",
+          'transition+=0.2',
         )
 
         .to(
@@ -226,16 +226,12 @@ const Hero = () => {
             y: 20,
             scale: 1,
             duration: 1.2,
-            ease: "none",
+            ease: 'none',
           },
-          "transition",
+          'transition',
         );
 
-      // ==========================================================
-      // WHY US
-      // ==========================================================
-
-      tl.add("whyUs")
+      tl.add('whyUs')
 
         .to(
           videoRef.current,
@@ -244,9 +240,9 @@ const Hero = () => {
             scale: 1,
             opacity: 1,
             duration: 1,
-            ease: "none",
+            ease: 'none',
           },
-          "whyUs",
+          'whyUs',
         )
 
         .fromTo(
@@ -254,16 +250,16 @@ const Hero = () => {
           {
             opacity: 0.2,
             y: 30,
-            color: "#5B6B9C",
+            color: '#5B6B9C',
           },
           {
             opacity: 1,
             y: 0,
-            color: "#ffffff",
+            color: '#ffffff',
             duration: 1.2,
-            ease: "none",
+            ease: 'none',
           },
-          "whyUs+=0.2",
+          'whyUs+=0.2',
         );
     },
     { scope: sectionRef },
@@ -272,8 +268,7 @@ const Hero = () => {
     <section ref={sectionRef}>
       <section
         ref={heroRef}
-        className=" h-screen -top-10 flex items-center justify-center
-      "
+        className="-top-10 flex h-screen items-center justify-center"
       >
         <CircleFrame
           circleWrapperRef={circleWrapperRef}
@@ -281,7 +276,7 @@ const Hero = () => {
         >
           <h2
             ref={scrollTextRef}
-            className=" absolute px-6 text-center text-xl sm:text-md md:text-lg lg:text-xl xl:text-xl font-semibold text-[#002685] leading-tight xl:mb-35"
+            className="sm:text-md absolute px-6 text-center text-xl leading-tight font-semibold text-[#002685] md:text-lg lg:text-xl xl:mb-35 xl:text-xl"
           >
             PLEASE,
             <br />
@@ -290,7 +285,7 @@ const Hero = () => {
 
           <h2
             ref={welcomeTextRef}
-            className=" absolute opacity-0 px-6 text-center text-xl sm:text-lg md:text-lg lg:text-xl xl:text-xl font-semibold text-[#002685] leading-tight"
+            className="absolute px-6 text-center text-xl leading-tight font-semibold text-[#002685] opacity-0 sm:text-lg md:text-lg lg:text-xl xl:text-xl"
           >
             WELCOME TO AROLA
           </h2>
@@ -301,18 +296,10 @@ const Hero = () => {
 
       <section
         ref={whyusRef}
-        className="
-        relative
-        -mt-[10vh]
-        min-h-screen
-        bg-[#00134B]
-        flex
-        items-center
-        z-20
-      "
+        className="relative z-20 -mt-[10vh] flex min-h-screen items-center bg-[#00134B]"
       >
-        <div className="w-full max-w-[1600px] mx-auto">
-          <div className="grid lg:grid-cols-2 gap-30 items-center">
+        <div className="mx-auto w-full max-w-[1600px]">
+          <div className="grid items-center gap-30 lg:grid-cols-2">
             {/* LEFT */}
 
             <div className="relative flex justify-center">
@@ -320,21 +307,14 @@ const Hero = () => {
 
               <div
                 ref={videoRef}
-                className="
-                relative
-                z-10
-                w-full
-                max-w-[560px]
-                aspect-[4/5]
-                overflow-hidden
-              "
+                className="relative z-10 aspect-[4/5] w-full max-w-[560px] overflow-hidden"
               >
                 <video
                   autoPlay
                   muted
                   loop
                   playsInline
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                 >
                   <source src="WHYUS.mp4" />
                 </video>
@@ -344,31 +324,13 @@ const Hero = () => {
             {/* RIGHT */}
 
             <div>
-              <h2
-                className="
-                text-4xl
-                sm:text-5xl
-                md:text-6xl
-                lg:text-6xl
-                xl:text-6xl
-                font-medium
-                text-white
-                leading-none
-                mb-8
-              "
-              >
+              <h2 className="mb-8 text-4xl leading-none font-medium text-white sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl">
                 Why Arola?
               </h2>
 
               <p
                 ref={paragraphRef}
-                className="
-                mt-8
-                text-lg
-                leading-[1.7]
-                text-white/25
-                max-w-2xl
-              "
+                className="mt-8 max-w-2xl text-lg leading-[1.7] text-white/25"
               >
                 In the high silence of the Himalayas, where earth rises above
                 the clouds and time moves slowly, Arola begins. Before cities.
@@ -386,32 +348,11 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      <section
-        ref={waterRef}
-        className="
-    min-h-screen
-    bg-[#0D1F68]
-"
-      ></section>
-      <section
-        ref={waterRef}
-        className="
-    min-h-screen
-    bg-[#0D1F68]
-"
-      ></section>
+      <section ref={waterRef} className="min-h-screen bg-[#0D1F68]"></section>
+      <section ref={waterRef} className="min-h-screen bg-[#0D1F68]"></section>
       <div
         ref={bottleGroupRef}
-        className="
-        absolute
-        left-1/2
-        bottom-[6vh]
-        -translate-x-1/2
-        pointer-events-none
-        z-50
-        flex
-        justify-center
-    "
+        className="pointer-events-none absolute bottom-[6vh] left-1/2 z-50 flex -translate-x-1/2 justify-center"
       >
         <Bottle
           bottleGroupRef={bottleGroupRef}

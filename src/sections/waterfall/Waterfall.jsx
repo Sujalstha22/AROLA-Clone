@@ -16,7 +16,6 @@ const Waterfall = ({ waterfallRef }) => {
       scale: 1.05,
     });
 
-    // Floating mist
     gsap.to(mistRef.current, {
       x: 80,
       y: -25,
@@ -29,7 +28,7 @@ const Waterfall = ({ waterfallRef }) => {
       x: 0,
       y: 0,
     });
-    // Gentle breathing effect
+
     gsap.to(mistRef.current, {
       scale: 1.08,
       opacity: 0,
@@ -50,7 +49,7 @@ const Waterfall = ({ waterfallRef }) => {
         ref={topCloudRef}
         src={mist}
         alt=""
-        className=" absolute -top-40 h-100 w-[220%] sm:w-[180%] lg:w-[130%] z-30 pointer-events-none select-none opacity-100
+        className=" absolute -top-40 h-100 w-screen sm:w-[180%] lg:w-[130%] z-30 pointer-events-none select-none opacity-100
   "
       />
       {/* Video */}
